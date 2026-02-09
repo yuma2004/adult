@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -382,14 +382,18 @@
         }
 
         .product-image {
-            background: linear-gradient(135deg, #f5f5f5 0%, #eee 100%);
+            background: #fff;
             min-height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #ccc;
             position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            padding: 0.8rem;
         }
 
         .product-image-label {
@@ -742,83 +746,12 @@
             line-height: 1.8;
             color: var(--color-text-muted);
         }
-
-        /* Related */
-        .related {
-            background: var(--color-bg-dark);
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .related-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-        }
-
-        .related h2 {
-            color: #fff;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .related-item {
-            background: rgba(255,255,255,0.05);
-            padding: 1.2rem;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .related-item:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-2px);
-        }
-
-        .related-item h3 {
-            color: #fff;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            line-height: 1.5;
-        }
-
-        .related-meta {
-            color: #888;
-            font-size: 0.75rem;
-        }
-
         /* Footer */
         footer {
             background: #0a0a0d;
             padding: 3rem 2rem;
             text-align: center;
         }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #888;
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-        }
-
         .footer-copy {
             color: #555;
             font-size: 0.75rem;
@@ -984,8 +917,8 @@
                 <span class="product-badge">初心者おすすめ</span>
                 <div class="product-main">
                     <div class="product-image">
-                        🥚
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/iroha-yukidaruma.webp" alt="iroha プレジャー・アイテム・ゆきだるま" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">iroha / イロハ</p>
@@ -1013,8 +946,8 @@
                         <div class="feature-bad">振動パターンは1種類のみ</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=iroha%20%E3%82%86%E3%81%8D%E3%81%A0%E3%82%8B%E3%81%BE" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=iroha%20%E3%82%86%E3%81%8D%E3%81%A0%E3%82%8B%E3%81%BE" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1024,8 +957,8 @@
                 <span class="product-rank silver">🥈 第2位</span>
                 <div class="product-main">
                     <div class="product-image">
-                        💜
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/satisfyer-pro-2.png" alt="Satisfyer Pro 2 Next Generation" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">Satisfyer / サティスファイヤー</p>
@@ -1053,8 +986,8 @@
                         <div class="feature-bad">価格はやや高め</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=Satisfyer%20Pro%202%20Next%20Generation" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=Satisfyer%20Pro%202%20Next%20Generation" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1065,8 +998,8 @@
                 <span class="product-badge" style="background:#38a169;">コスパ◎</span>
                 <div class="product-main">
                     <div class="product-image">
-                        💗
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/iroha-stick.webp" alt="iroha stick（イロハスティック）" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">iroha / イロハ</p>
@@ -1094,8 +1027,8 @@
                         <div class="feature-bad">パワーは控えめ</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=iroha%20stick" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=iroha%20stick" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1116,8 +1049,8 @@
                 <span class="product-badge">殿堂入り</span>
                 <div class="product-main">
                     <div class="product-image">
-                        🏆
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/tenga-egg.jpg" alt="TENGA EGG（テンガエッグ）バラエティパック" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">TENGA / テンガ</p>
@@ -1145,8 +1078,8 @@
                         <div class="feature-bad">繰り返し使用は難しい</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=TENGA%20EGG%20%E3%83%90%E3%83%A9%E3%82%A8%E3%83%86%E3%82%A3%E3%83%91%E3%83%83%E3%82%AF" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=TENGA%20EGG%20%E3%83%90%E3%83%A9%E3%82%A8%E3%83%86%E3%82%A3%E3%83%91%E3%83%83%E3%82%AF" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1156,8 +1089,8 @@
                 <span class="product-rank silver">🥈 第2位</span>
                 <div class="product-main">
                     <div class="product-image">
-                        🔵
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/tenga-flip-0.jpg" alt="TENGA FLIP 0（フリップゼロ）" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">TENGA / テンガ</p>
@@ -1185,8 +1118,8 @@
                         <div class="feature-bad">初期費用はやや高め</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=TENGA%20FLIP%200" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=TENGA%20FLIP%200" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1197,8 +1130,8 @@
                 <span class="product-badge" style="background:#6c5ce7;">電動</span>
                 <div class="product-main">
                     <div class="product-image">
-                        ⚡
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/tenga-aero.jpg" alt="TENGA AERO（テンガエアロ）" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">TENGA / テンガ</p>
@@ -1224,8 +1157,8 @@
                         <div class="feature-bad">やや大きめで収納注意</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=TENGA%20AERO" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=TENGA%20AERO" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1241,8 +1174,8 @@
                 <span class="product-badge">カップル人気No.1</span>
                 <div class="product-main">
                     <div class="product-image">
-                        💕
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/we-vibe-sync.jpg" alt="We-Vibe Sync（シンク）" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">We-Vibe / ウィーバイブ</p>
@@ -1270,8 +1203,8 @@
                         <div class="feature-bad">価格は高め</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=We-Vibe%20Sync" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=We-Vibe%20Sync" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1281,8 +1214,8 @@
                 <span class="product-rank silver">🥈 第2位</span>
                 <div class="product-main">
                     <div class="product-image">
-                        🌸
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/lelo-tiani-3.webp" alt="LELO TIANI 3（ティアーニ3）" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">LELO / レロ</p>
@@ -1310,8 +1243,8 @@
                         <div class="feature-bad">アプリ非対応</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=LELO%20TIANI%203" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=LELO%20TIANI%203" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1322,8 +1255,8 @@
                 <span class="product-badge" style="background:#38a169;">定番</span>
                 <div class="product-main">
                     <div class="product-image">
-                        💧
-                        <span class="product-image-label">イメージ</span>
+                        <img src="images/pepe-lotion.jpg" alt="ぺぺローション 360ml" loading="lazy" decoding="async">
+                        <span class="product-image-label">商品画像</span>
                     </div>
                     <div class="product-info">
                         <p class="product-brand">Rends / レンズ</p>
@@ -1350,8 +1283,8 @@
                         <div class="feature-bad">ボトルデザインがシンプル</div>
                     </div>
                     <div class="product-cta">
-                        <a href="#" class="btn-primary">🛒 Amazonで購入</a>
-                        <a href="#" class="btn-secondary">楽天で見る</a>
+                        <a href="https://www.amazon.co.jp/s?k=%E3%81%BA%E3%81%BA%E3%83%AD%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20360ml" class="btn-primary" target="_blank" rel="noopener noreferrer">🛒 Amazonで購入</a>
+                        <a href="https://search.rakuten.co.jp/search/mall/?sitem=%E3%81%BA%E3%81%BA%E3%83%AD%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20360ml" class="btn-secondary" target="_blank" rel="noopener noreferrer">楽天で見る</a>
                     </div>
                 </div>
             </div>
@@ -1517,42 +1450,16 @@
         </article>
     </main>
 
-    <!-- Related -->
-    <section class="related">
-        <div class="related-inner">
-            <h2>あわせて読みたい</h2>
-            <div class="related-grid">
-                <a href="#" class="related-item">
-                    <h3>【2025年版】女性用ローターおすすめランキング｜静音モデル厳選</h3>
-                    <p class="related-meta">2025.01.20 / 女性向け</p>
-                </a>
-                <a href="#" class="related-item">
-                    <h3>TENGAシリーズ全比較｜用途別おすすめモデルガイド</h3>
-                    <p class="related-meta">2025.01.15 / 男性向け</p>
-                </a>
-                <a href="#" class="related-item">
-                    <h3>おすすめローション10選｜目的別に選び方を解説</h3>
-                    <p class="related-meta">2025.01.10 / ローション</p>
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-links">
-            <a href="#">運営者情報</a>
-            <a href="#">プライバシーポリシー</a>
-            <a href="#">免責事項</a>
-            <a href="#">お問い合わせ</a>
-        </div>
         <p class="footer-copy">&copy; 2025 LOVEGOODS NAVI All Rights Reserved.</p>
         <p class="footer-disclaimer">※本サイトは18歳以上の方を対象としています。<br>※本サイトはアフィリエイトプログラムに参加しており、紹介リンクから購入された場合、当サイトに報酬が支払われることがあります。<br>※商品の価格は記事執筆時点のものです。最新の価格は各販売サイトでご確認ください。</p>
     </footer>
 
     <!-- Floating CTA -->
     <div class="floating-cta" id="floatingCta">
-        <a href="#">🔥 人気No.1 iroha を見る →</a>
+        <a href="https://www.amazon.co.jp/s?k=iroha%20%E3%82%86%E3%81%8D%E3%81%A0%E3%82%8B%E3%81%BE" target="_blank" rel="noopener noreferrer">🔥 人気No.1 iroha を見る →</a>
     </div>
 
     <script>
@@ -1589,3 +1496,8 @@
     </script>
 </body>
 </html>
+
+
+
+
+
